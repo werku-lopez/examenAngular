@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">RubikStore</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']"
+            >Cubos</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            usuario
+          </a>
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['/logIn']"
+                >Log in</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['/signIn']"
+                >Sign in</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['/logOut']"
+                >Log out</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Marcas
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let marca of marcas">
+              <a
+                class="dropdown-item"
+                [routerLink]="['/marca/', marca]"
+                >{{ marca }}</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Modelos
+            </a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let modelo of modelos">
+                <a
+                  class="dropdown-item"
+                  [routerLink]="['/modelo/', modelo.modelo]"
+                  >{{ modelo.modelo }}</a
+                >
+              </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>

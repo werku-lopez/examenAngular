@@ -1,0 +1,13 @@
+<div class="container pt-5" *ngIf="auth">
+  <a class="btn btn-primary m-2" [routerLink]="['/perfil', auth.idUsuario, auth.nombre, auth.email]"
+    >Ver perfil</a
+  >
+  <a
+    class="btn btn-success col-md-3 m-2"
+    [routerLink]="['/compras', auth.idUsuario, key]"
+    >Ver compras</a
+  >
+  <a class="btn btn-warning col-md-3 m-2" [routerLink]="['/nueva-compra']"
+    >Realizar compra</a
+  >
+</div>

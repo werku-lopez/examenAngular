@@ -1,0 +1,28 @@
+<p>formulario-singin works!</p>
+<div class="container pt-5">
+  <h1 class="mb-5">Registrarse</h1>
+  <form #ngFromLogin="ngForm">
+    <div class="row g-2">
+      <div class="col-md-5">
+        <input
+          type="text"
+          #email
+          name="email"
+          class="form-control"
+          placeholder="email"
+        />
+      </div>
+      <div class="col-md-5">
+        <input
+          type="text"
+          #password
+          name="password"
+          class="form-control"
+          placeholder="password"
+        />
+      </div>
+      <button class="btn btn-outline-primary col-md-2"
+      (click)="signIn()">log in</button>
+    </div>
+  </form>
+</div>
